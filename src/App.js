@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react'; // Import Suspense and lazy here
+import React, { Suspense, lazy, useEffect } from 'react'; // Import Suspense and lazy here
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -33,6 +33,22 @@ const DynamicGameComponent = () => {
 };
 
 function App() {
+  useEffect(() => {
+    // Function to prevent default action for up and down arrow keys
+    const preventScroll = (e) => {
+      if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+        e.preventDefault();
+      }
+    };
+    
+    // Add event listener when component mounts
+    window.addEventListener('keydown', preventScroll);
+    
+    // Cleanup function to remove event listener when component unmounts
+    return () => window.removeEventListener('keydown', preventScroll);
+  }, []);
+
+
   return (
     <Router>
       <div className="App">
