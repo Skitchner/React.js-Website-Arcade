@@ -1,0 +1,89 @@
+.game-box {
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #1a1a2e; /* Deep blue for a modern and less stark dark mode */
+    text-align: center;
+    height: 80vh;
+    width: 100vh;
+    margin: auto;
+    color: #e0e0e0; /* Light grey for text, ensuring readability */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #0f3460; /* Dark blue, providing a professional look */
+    color: #e0e0e0; /* Light grey text for contrast */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.start-button:hover {
+    background-color: #185abd; /* A brighter blue for hover state */
+}
+
+.question {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ffffff; /* Pure white for questions to ensure maximum readability */
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    align-items: center;
+}
+
+/* Updated answer button styles for better readability */
+.answer-button {
+    border-radius: 10px;
+    color: #1a1a2e; /* Deep blue text to contrast with light button backgrounds */
+    border: 1px solid #e0e0e0; /* Light grey border for some definition */
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 100%;
+    margin: 10px 0;
+    background-color: #e0e0e0; /* Light grey background for the buttons */
+}
+
+.answer-button:hover {
+    background-color: #cacfd9; /* A slightly darker shade for hover */
+    transform: scale(1.05); /* A subtle increase in scale for interactivity */
+}
+
+.time-bar {
+    height: 20px;
+    background-color: #e63946; /* A strong red for urgency in the time bar */
+    border-radius: 10px;
+    max-width: 500px;
+    transition: width 0.5s ease;
+    align-self: center;
+}
+
+.feedback {
+    font-size: 1.25rem;
+    color: #f1faee; /* A soft off-white for feedback messages */
+    margin: 20px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.scoreboard {
+    color: #a8dadc; /* Light teal for the scoreboard */
+    font-size: 1.2rem;
+    margin-top: 20px;
+}

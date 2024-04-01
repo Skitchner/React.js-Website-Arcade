@@ -1,0 +1,9 @@
+/* Header.css */
+.App-header {
+    background-color: #20232a;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5%;
+    box-shadow: 0px 0px 44px #101115;;
+  }
