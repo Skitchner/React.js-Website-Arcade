@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Tauri&display=swap');
+
+.game-box {
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #222;
+    text-align: center;
+    height: 80vh;
+    width: 80vw;
+    max-width: 600px; /* Limits the size on larger screens */
+    margin: auto; /* Centers the box vertically and horizontally */
+    font-family: 'Tauri'; /* Default font for the game box */
+}
+
+.hangman-image {
+    width: 200px; /* Or any other fixed size */
+    height: auto; /* This will maintain the aspect ratio */
+}
+
+.reset-button, .difficulty button {
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: 'Tauri'; /* Using Roboto for buttons */
+}
+
+.guesses-left {
+    font-size: 64px !important;
+    color: #eee; /* Light text color for readability against the dark background */
+    margin: 15px 0; /* Adds uniform spacing around text */
+    font-family: 'Rowdies'; /* Roboto for text elements for consistency */
+}
+
+.word, .guessed-letters, .result {
+    color: #eee; /* Light text color for readability against the dark background */
+    margin: 15px 0; /* Adds uniform spacing around text */
+    font-family: 'Tauri'; /* Roboto for text elements for consistency */
+}
+
+.word {
+    font-size: 36px;
+    letter-spacing: 3px; /* Increases spacing between letters for clarity */
+    font-family: 'Rowdies'; /* Special font for the displayed word */
+}
+
+.guesses-left, .guessed-letters {
+    font-size: 28px;
+    opacity: 0.7; /* Slightly dimmed to reduce emphasis */
+}
+
+.win-message {
+    color: #28a745; /* Green for win */
+    background-color: rgba(0, 255, 0, 0.2); /* Adds a subtle background to the result message */
+
+  }
+  
+  .loss-message {
+    color: #dc3545; /* Red for loss */
+    background-color: rgba(255, 0, 0, 0.2); /* Adds a subtle background to the result message */
+  }
+  
+
+.result {
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.reset-button, .difficulty button {
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.reset-button:hover, .difficulty button:hover {
+    background-color: #bbb; /* Slightly darker on hover for a button press effect */
+    color: #222;
+}
+
+.difficulty button.active {
+    background-color: #666; /* Distinguishes the currently active difficulty level */
+    color: #fff;
+}
