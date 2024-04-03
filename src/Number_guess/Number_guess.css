@@ -1,54 +1,87 @@
 .game-box {
-  padding: 20px; /* Reduced padding to allow more space for the grid */
+  padding: 20px;
   border-radius: 10px;
   background-color: #222;
   text-align: center;
   max-height: 90vh;
-  width: 60vw; /* Adjust the width to fit the grid better */
-  margin: 20px auto; /* Added some top and bottom margin */
+  width: 80vh;
+  max-width: 800px; 
+  margin: 20px auto;
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; 
   align-items: center;
-  overflow: hidden; /* Hide overflow */
+  overflow: auto; 
 }
 
-/* ... other styles ... */
+.message-warning,
+.message-success,
+.message-info {
+  color: #ccc;
+  margin: 5px 0;
+}
 
+/* Adjust the message icon sizes and alignment */
+.message-warning .emoji,
+.message-success .emoji,
+.message-info .emoji {
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+/* Grid container for numbers */
 .numbers {
   display: grid;
-  grid-template-columns: repeat(10, 1fr); /* 10 columns */
-  grid-gap: 2px; /* Space between buttons */
-  width: 100%; /* Grid width to match the container */
+  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr)); /* Make the grid responsive */
+  grid-gap: 5px; /* Space between buttons */
+  width: 100%;
+  padding: 10px 0; /* Padding top and bottom */
 }
 
+/* Button styling for numbers */
 .number {
   background-color: #333;
   color: #fff;
-  border: none; /* Removing border to reduce space */
+  border: none;
   border-radius: 5px;
-  margin: 0; /* Reset margin to keep items square */
-  font-size: 0.9em; /* Adjust font size to fit */
-  aspect-ratio: 1 / 1; /* Square aspect ratio */
-  padding: 5%; /* Padding for sizing */
+  padding: 10px; /* Uniform padding */
+  font-size: 1em;
+  aspect-ratio: 1; /* Keep it square */
+  place-self: center; /* Center in grid area */
 }
 
 .number.disabled {
-  background-color: #666;
+  background-color: #555; /* A bit lighter than the enabled buttons */
   cursor: not-allowed;
 }
 
-/* Media query adjustments */
+/* The reset button at the bottom */
+.reset {
+  padding: 10px 20px;
+  margin-top: 20px; /* Extra space above the reset button */
+  font-size: 1em;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Media queries for smaller screens */
 @media (max-width: 600px) {
   .game-box {
-    font-size: 10px; /* Adjust font size for small screens */
-    width: 90vw; /* Increase width to use more of the viewport */
-    padding: 10px; /* Reduce padding */
+    padding: 10px;
+    width: 95vw; /* Use almost full width for very small screens */
   }
-  
+
   .number {
-    padding: 3%; /* Reduce padding for small screens */
-    font-size: 2vw; /* Font size based on viewport width */
+    padding: 8px; /* Slightly reduce padding */
+    font-size: 3.5vw; /* Increase font size for readability */
+  }
+
+  .reset {
+    padding: 8px 16px;
+    font-size: 3.5vw;
   }
 }
