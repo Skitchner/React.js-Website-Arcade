@@ -56,9 +56,6 @@
   }
   
   .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     display: flex;
@@ -79,9 +76,7 @@
     display: inline-block;
     margin: auto;
     padding: 2em;
-    background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
   }
   
