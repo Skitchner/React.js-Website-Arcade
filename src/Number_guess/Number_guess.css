@@ -1,87 +1,58 @@
 .game-box {
-  padding: 20px;
+  padding: 40px;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: #222;
-  text-align: center;
-  max-height: 90vh;
-  width: 80vh;
-  max-width: 800px; 
-  margin: 20px auto;
   color: #fff;
+  text-align: center;
+  height: 80vh;
+  width: 80vw;
+  max-width: 600px;
+  font-family: 'Tauri', sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; 
-  align-items: center;
-  overflow: auto; 
+  justify-content: center;
+  gap: 20px;
 }
 
-.message-warning,
-.message-success,
-.message-info {
-  color: #ccc;
-  margin: 5px 0;
-}
-
-/* Adjust the message icon sizes and alignment */
-.message-warning .emoji,
-.message-success .emoji,
-.message-info .emoji {
-  font-size: 1.5em;
-  vertical-align: middle;
-}
-
-/* Grid container for numbers */
-.numbers {
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr)); /* Make the grid responsive */
-  grid-gap: 5px; /* Space between buttons */
-  width: 100%;
-  padding: 10px 0; /* Padding top and bottom */
+  grid-template-columns: repeat(10, 1fr);
+  gap: 5px;
+  max-height: 50vh;
+  overflow-y: auto;
 }
 
-/* Button styling for numbers */
-.number {
-  background-color: #333;
-  color: #fff;
+button {
+  background-color: #444;
   border: none;
   border-radius: 5px;
-  padding: 10px; /* Uniform padding */
-  font-size: 1em;
-  aspect-ratio: 1; /* Keep it square */
-  place-self: center; /* Center in grid area */
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.number.disabled {
-  background-color: #555; /* A bit lighter than the enabled buttons */
+button:hover {
+  background-color: #555;
+}
+
+button:disabled {
+  background-color: #333;
   cursor: not-allowed;
 }
 
-/* The reset button at the bottom */
-.reset {
+.reset-button {
+  background-color: #d33;
   padding: 10px 20px;
-  margin-top: 20px; /* Extra space above the reset button */
-  font-size: 1em;
-  background: #333;
+  font-size: 16px;
+  border-radius: 5px;
   color: white;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-/* Media queries for smaller screens */
-@media (max-width: 600px) {
-  .game-box {
-    padding: 10px;
-    width: 95vw; /* Use almost full width for very small screens */
-  }
-
-  .number {
-    padding: 8px; /* Slightly reduce padding */
-    font-size: 3.5vw; /* Increase font size for readability */
-  }
-
-  .reset {
-    padding: 8px 16px;
-    font-size: 3.5vw;
-  }
+.reset-button:hover {
+  background-color: #f55;
 }
