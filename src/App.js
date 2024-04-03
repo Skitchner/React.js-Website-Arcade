@@ -36,7 +36,7 @@ function App() {
   useEffect(() => {
     // Function to prevent default action for up and down arrow keys
     const preventScroll = (e) => {
-      if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+      if (e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
         e.preventDefault();
       }
     };
