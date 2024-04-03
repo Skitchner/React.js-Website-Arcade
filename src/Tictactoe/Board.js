@@ -1,7 +1,6 @@
 import './Board.css'; 
 
 function Square({ value, onClick }) {
-  // Assign a class based on the square's value
   const className = `square ${value === 'X' ? 'x' : value === 'O' ? 'o' : ''}`;
 
   return (

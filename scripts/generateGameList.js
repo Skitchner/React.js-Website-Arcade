@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to capitalize the first letter of a string
+
 const capitalize = (s) => s.toUpperCase();
 
 const srcPath = path.join(__dirname, '../src');
@@ -11,7 +11,7 @@ const gameFolders = fs.readdirSync(srcPath)
     const fullPath = path.join(srcPath, file);
     return fs.statSync(fullPath).isDirectory() && !['components', 'utils', 'Home'].includes(file);
   })
-  .map(capitalize); // Auto capitalize the folder names
+  .map(capitalize);
 
 const gameListContent = `// This file is generated automatically. Do not edit.\nexport default ${JSON.stringify(gameFolders)};`;
 

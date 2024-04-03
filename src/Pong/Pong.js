@@ -73,9 +73,9 @@ function App() {
     const handleKeyDown = (event) => {
       const paddleHeight = 20;
       if (event.key === 'ArrowUp' && paddlePos > 0) {
-        setPaddlePos(prev => Math.max(prev - 5, 0)); // Adjust for smoother movement
-      } else if (event.key === 'ArrowDown' && paddlePos < 100 - paddleHeight) { // Ensures paddle stays within bounds
-        setPaddlePos(prev => Math.min(prev + 5, 100 - paddleHeight)); // Prevents moving below the bottom
+        setPaddlePos(prev => Math.max(prev - 5, 0)); 
+      } else if (event.key === 'ArrowDown' && paddlePos < 100 - paddleHeight) { 
+        setPaddlePos(prev => Math.min(prev + 5, 100 - paddleHeight)); 
       }
     };
     window.addEventListener('keydown', handleKeyDown);
@@ -92,66 +92,66 @@ function App() {
 
       const willMiss = Math.random() < 0.9;
 
-      // Move opponent paddle
-      const opponentMoveSpeed = 1.3**score; // Adjust for difficulty
+      
+      const opponentMoveSpeed = 1.3**score; 
       if (ballPos.top > opponentPaddlePos + paddleHeight / 2) {
         setOpponentPaddlePos(prevPos => Math.min(prevPos + opponentMoveSpeed, 100 - paddleHeight));
       } else if (ballPos.top < opponentPaddlePos + paddleHeight / 2) {
         setOpponentPaddlePos(prevPos => Math.max(prevPos - opponentMoveSpeed, 0));
       }
 
-      // Collision with top or bottom walls
+      
       if (newTop <= 0 || newTop >= 95) {
         setBallDirection(prev => ({ ...prev, y: -prev.y }));
       }
       const ballDiameter = 3
-      // Collision with player's paddle
+      
       if (
-        newLeft <= (1 + ballDiameter) && // Consider the paddle's width plus the ball's diameter
-        newTop + ballDiameter >= paddlePos && // Adjusted to consider the ball's height
-        newTop <= paddlePos + paddleHeight // Ensures accurate collision detection at the paddle's bottom edge
+        newLeft <= (1 + ballDiameter) && 
+        newTop + ballDiameter >= paddlePos && 
+        newTop <= paddlePos + paddleHeight 
       ) {
         setBallDirection(prev => ({ ...prev, x: -prev.x }));
       }
 
-      // Collision with opponent's paddle
+      
       if (
-        newLeft >= 95 - ballDiameter && // Adjust based on the screen width minus the ball's diameter for accuracy
-        newTop + ballDiameter >= opponentPaddlePos && // Consider the ball's height for accurate detection
-        newTop <= opponentPaddlePos + paddleHeight // Ensures collision detection at the paddle's bottom edge is accurate
+        newLeft >= 95 - ballDiameter && 
+        newTop + ballDiameter >= opponentPaddlePos && 
+        newTop <= opponentPaddlePos + paddleHeight 
       ) {
         setBallDirection(prev => ({ ...prev, x: -prev.x }));
       }
 
-      // Ball missed the paddles
+      
       if (newLeft < 0 || newLeft > 100) {
-        setBallPos({ top: 50, left: 50 }); // Reset ball position
+        setBallPos({ top: 50, left: 50 }); 
         if (newLeft < 0) {
           setIsGameOver(true);
         } else {
           setScore((currentScore) => currentScore + 1);
-          setBallSpeed(currentSpeed => Math.min(currentSpeed + 0.1, 2)); // Increase ball speed slightly, cap at 2 for example
+          setBallSpeed(currentSpeed => Math.min(currentSpeed + 0.1, 2)); 
         }
       } else {
-        setBallPos({ top: newTop, left: newLeft }); // Update ball position
+        setBallPos({ top: newTop, left: newLeft }); 
       }
       const resetBallSpeed = () => {
-        setBallSpeed(1); // Reset to initial speed when needed, e.g., starting a new game
+        setBallSpeed(1); 
       };
 
     };
 
     const updateOpponentPaddle = () => {
       const targetPos = ballPos.top - paddleHeight / 2;
-      const moveSpeed = 0.05; // Adjust for smoother or faster interpolation
+      const moveSpeed = 0.05; 
       setOpponentPaddlePos(prevPos => prevPos + (targetPos - prevPos) * moveSpeed);
     };
   
-    // Setup intervals for ball and opponent paddle movement
-    const ballInterval = setInterval(moveBall, 50); // Adjust interval for game speed preference
-    const opponentInterval = setInterval(updateOpponentPaddle, 50); // Update opponent position
+    
+    const ballInterval = setInterval(moveBall, 50); 
+    const opponentInterval = setInterval(updateOpponentPaddle, 50); 
   
-    // Cleanup function to clear intervals when component unmounts or game stops
+    
     return () => {
       clearInterval(ballInterval);
       clearInterval(opponentInterval);
@@ -162,13 +162,13 @@ function App() {
   };
   
   const restartGame = () => {
-    setPaddlePos(40); // Reset player paddle position
-    setOpponentPaddlePos(40); // Reset opponent paddle position
-    setBallPos({ top: 50, left: 50 }); // Reset ball position
-    setBallSpeed(baseBallSpeed); // Reset ball speed to its base speed
-    setScore(0); // Reset score
-    setIsGameOver(false); // Reset game over flag
-    setIsGameStarted(true); // Start the game immediately
+    setPaddlePos(40); 
+    setOpponentPaddlePos(40); 
+    setBallPos({ top: 50, left: 50 }); 
+    setBallSpeed(baseBallSpeed); 
+    setScore(0); 
+    setIsGameOver(false); 
+    setIsGameStarted(true); 
   };
   
 
@@ -178,7 +178,7 @@ function App() {
 
 
   if (isGameOver) {
-    // Game over screen with the semi-transparent overlay
+    
     return (
       <div className="pong">
         <div className="overlay">
@@ -190,7 +190,7 @@ function App() {
       </div>
     );
   } else if (!isGameStarted) {
-    // Start screen with the semi-transparent overlay
+    
     return (
       <div className="pong">
         <div className="overlay">
@@ -203,7 +203,7 @@ function App() {
   return (
     <div className="pong">
       <Paddle top={paddlePos} isOpponent={false} />
-      <Paddle top={opponentPaddlePos} isOpponent={true} /> {/* Assuming you have opponentPaddlePos state */}
+      <Paddle top={opponentPaddlePos} isOpponent={true} />
       <Ball top={ballPos.top} left={ballPos.left} />
       <div className="score">Score: {score}</div>
     </div>

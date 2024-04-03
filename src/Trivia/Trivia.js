@@ -9,12 +9,12 @@ const Trivia = () => {
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [shuffledAnswers, setShuffledAnswers] = useState([]);
-  const [timeLeft, setTimeLeft] = useState(80); // Represents the percentage of time left
+  const [timeLeft, setTimeLeft] = useState(80);
   const [feedback, setFeedback] = useState('');
   const [gameStarted, setGameStarted] = useState(false);
-  const [waitingForNext, setWaitingForNext] = useState(false); // To manage the state between questions
-  const [correctCount, setCorrectCount] = useState(0); // Tracks number of correct answers
-  const [incorrectCount, setIncorrectCount] = useState(0); // Tracks number of incorrect answers
+  const [waitingForNext, setWaitingForNext] = useState(false);
+  const [correctCount, setCorrectCount] = useState(0);
+  const [incorrectCount, setIncorrectCount] = useState(0);
 
   useEffect(() => {
     if (gameStarted) {
@@ -34,7 +34,7 @@ const Trivia = () => {
     let interval;
     if (!waitingForNext && gameStarted) {
       interval = setInterval(() => {
-        setTimeLeft(prevTime => Math.max(0, prevTime - 1)); // Decrease time by 10% every second
+        setTimeLeft(prevTime => Math.max(0, prevTime - 1));
       }, 100);
       if (timeLeft === 0) {
         clearInterval(interval);
@@ -56,18 +56,18 @@ const Trivia = () => {
   };
 
   const resetTimer = () => {
-    setTimeLeft(80); // Reset the timer to 100% for the next question
-    setWaitingForNext(false); // Ready for next action
+    setTimeLeft(80);
+    setWaitingForNext(false);
   };
 
   const handleTimeOut = () => {
     if (!waitingForNext) {
       setFeedback(`Time's up! The correct answer was: ${questions[currentQuestionIndex]?.correct_answer}`);
-      setIncorrectCount(count => count + 1); // Increment incorrect count on timeout
+      setIncorrectCount(count => count + 1);
       setWaitingForNext(true);
       setTimeout(() => {
         showNextQuestion();
-      }, 5000); // Wait 5 seconds before showing the next question
+      }, 5000);
     }
   };
 
@@ -76,14 +76,14 @@ const Trivia = () => {
       const isCorrect = answer === questions[currentQuestionIndex].correct_answer;
       setFeedback(isCorrect ? "Correct!" : `Wrong! The correct answer was: ${questions[currentQuestionIndex].correct_answer}`);
       if (isCorrect) {
-        setCorrectCount(count => count + 1); // Increment correct count
+        setCorrectCount(count => count + 1);
       } else {
-        setIncorrectCount(count => count + 1); // Increment incorrect count
+        setIncorrectCount(count => count + 1);
       }
       setWaitingForNext(true);
       setTimeout(() => {
         showNextQuestion();
-      }, 5000); // Wait 5 seconds before showing the next question
+      }, 5000);
     }
   };
 
@@ -99,8 +99,8 @@ const Trivia = () => {
 
   const handleStartGame = () => {
     setGameStarted(true);
-    setCorrectCount(0); // Reset correct count
-    setIncorrectCount(0); // Reset incorrect count
+    setCorrectCount(0);
+    setIncorrectCount(0);
     resetTimer();
   };
 

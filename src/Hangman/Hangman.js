@@ -51,7 +51,7 @@ function Hangman() {
   
         // Check if the word contains only alphabet characters
         if (!isValidWord(randomWord)) {
-          continue; // Skip to the next word if it contains non-alphabet characters
+          continue;
         }
   
         try {

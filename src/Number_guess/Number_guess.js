@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Number_guess.css'; // Ensure the CSS file is named NumberGuessingGame.css
+import './Number_guess.css'; 
 
 const NumberGuess = () => {
   const [targetNumber, setTargetNumber] = useState(Math.floor(Math.random() * 100) + 1);

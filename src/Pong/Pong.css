@@ -31,7 +31,6 @@
     font-size: 24px;
   }
   
-  /* Define a generic screen overlay style */
   .overlay {
     position: absolute;
     top: 0;
@@ -77,7 +76,6 @@
     background-color: #00796b;
   }
   
-  /* Add some padding and style to the paragraph for score display */
   .game-over-screen p {
     font-size: 24px;
     margin: 20px 0;
