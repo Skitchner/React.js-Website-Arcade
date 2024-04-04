@@ -17,13 +17,13 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-  color: white; /* Set your desired color */
-  text-decoration: none; /* Removes underline if desired */
+  color: white;
+  text-decoration: none;
 }
 
 ul {
-  list-style-type: none; /* This removes the bullet points */
-  padding: 0; /* This removes padding, which is often added by default */
-  margin: 0; /* Adjust margin as needed */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
   column-count: 3;
 }
