@@ -43,4 +43,11 @@ To get started with the application, follow these steps:
 
 - This project was developed by Rory Driscoll, Sarah Kitchner, and Ryan Leonard.
 
+1. **Hangman**: Ryan Leonard
+2. **Number Guess**: Ryan Leonard
+3. **Pong**: Rory Driscoll
+4. **Snake**: Rory Driscoll
+5. **Tic Tac Toe**: Sarah Kitchner
+6. **Trivia**: Ryan Leonard
+
 Thank you for using our React.js web app! We hope you enjoy playing the games.
