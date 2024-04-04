@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# React.js Web App with Multiple Games
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React.js web application featuring multiple games. You can find the following games:
 
-## Available Scripts
+- Hangman
+- Number Guess
+- Pong
+- Snake
+- Tic Tac Toe
+- Trivia
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+To get started with the application, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Install dependencies using `npm install` or `yarn install`.
+4. Run the application using `npm start` or `yarn start`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How to Play
 
-### `npm test`
+- Each game can be accessed through its respective route. For example, to play Hangman, navigate to `/hangman`.
+- Start the game by clicking the "Start Game" button or following the game-specific instructions.
+- Enjoy playing the games!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Development
 
-### `npm run build`
+- The application is built using React.js, React Router, and CSS.
+- Each game is implemented as a separate component and can be found in the corresponding directory.
+- Feel free to contribute by adding more games or improving existing ones!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Available Games
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Hangman**: Guess the word before the hangman is fully drawn.
+2. **Number Guess**: Guess the randomly generated number within a given range.
+3. **Pong**: Classic Pong game where you control the paddle to hit the ball.
+4. **Snake**: Control the snake to eat food and grow while avoiding collisions.
+5. **Tic Tac Toe**: Play the classic game of Tic Tac Toe against the computer or another player.
+6. **Trivia**: Answer trivia questions within a time limit to test your knowledge.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Credits
 
-### `npm run eject`
+- This project was developed by Rory Driscoll, Sarah Kitchner, and Ryan Leonard.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for using our React.js web app! We hope you enjoy playing the games.
