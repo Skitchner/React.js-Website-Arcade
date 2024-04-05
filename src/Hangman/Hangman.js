@@ -132,33 +132,30 @@ function Hangman() {
   }
   
   return (
-    <div className="hangman">
-    <div className="game-box">
-    <p className="guesses-left">{guesses}</p>
-    <img src={getHangmanImage()} alt="Hangman" className={`hangman-image`} />
-    <p className={`word`}>{displayWord}</p>
-    <p className="guessed-letters">{guessedLetters.join(' ')}</p>
-    {guesses === 0 ? (
-      <p className="result loss-message">You lost! The word was {word}.</p>
-      ) : null}
-      {!displayWord.includes('_') && guesses > 0 ? (
-        <p className="result win-message">You won! Click a new difficulty to play again.</p>
+      <div className="game-box">
+        <p className="guesses-left">{guesses}</p>
+        <img src={getHangmanImage()} alt="Hangman" className="hangman-image" />
+        <p className="word">{displayWord}</p>
+        <p className="guessed-letters">{guessedLetters.join(' ')}</p>
+        {guesses === 0 ? (
+          <p className="result loss-message">You lost! The word was {word}.</p>
+        ) : null}
+        {!displayWord.includes('_') && guesses > 0 ? (
+          <p className="result win-message">You won! Click a new difficulty to play again.</p>
         ) : null}
         {(guesses === 0 || (!displayWord.includes('_') && guesses > 0)) && (
           <div>
-          <div className="difficulty">
-          <button onClick={() => resetGame('easy')}>EASY</button>
-          <button onClick={() => resetGame('medium')}>MEDIUM</button>
-          <button onClick={() => resetGame('hard')}>HARD</button>
+            <div className="difficulty">
+              <button onClick={() => resetGame('easy')}>EASY</button>
+              <button onClick={() => resetGame('medium')}>MEDIUM</button>
+              <button onClick={() => resetGame('hard')}>HARD</button>
+            </div>
           </div>
-          </div>
-          )}
-          </div>
-          </div>
-          );
-          
-          
-        }
+        )}
+      </div>
+  );
+
+}
         
         export default Hangman;
         
