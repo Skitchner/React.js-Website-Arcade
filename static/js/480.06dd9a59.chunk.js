@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgame_arcade=self.webpackChunkgame_arcade||[]).push([[480],{83480:(e,a,c)=>{c.r(a),c.d(a,{default:()=>s});const s=["HANGMAN","NUMBER_GUESS","PONG","SNAKE","TICTACTOE","TRIVIA"]}}]);
+//# sourceMappingURL=480.06dd9a59.chunk.js.map

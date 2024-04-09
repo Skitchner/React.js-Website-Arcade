@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgame_arcade=self.webpackChunkgame_arcade||[]).push([[357],{15357:(e,a,s)=>{s.r(a),s.d(a,{default:()=>d});s(65043);var c=s(70579);const d=()=>(0,c.jsxs)("div",{children:[(0,c.jsx)("h2",{children:"Game Not Found"}),(0,c.jsx)("p",{children:"The game you're looking for doesn't seem to exist. Please check the URL and try again."})]})}}]);
+//# sourceMappingURL=357.ccbe8eb6.chunk.js.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/480.06dd9a59.chunk.js","mappings":"wIACA,SAAgB,UAAU,eAAe,OAAO,QAAQ,YAAY,S","sources":["gameList.js"],"sourcesContent":["// This file is generated automatically. Do not edit.\nexport default [\"HANGMAN\",\"NUMBER_GUESS\",\"PONG\",\"SNAKE\",\"TICTACTOE\",\"TRIVIA\"];"],"names":[],"sourceRoot":""}

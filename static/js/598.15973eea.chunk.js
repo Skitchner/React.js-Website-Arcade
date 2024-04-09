@@ -1,0 +1,2 @@
+(self.webpackChunkgame_arcade=self.webpackChunkgame_arcade||[]).push([[598],{55653:(e,a,t)=>{"use strict";t.r(a);var r=t(26004),c=t(54111),n=t(70579);test("renders learn react link",(()=>{(0,r.XX)((0,n.jsx)(c.default,{}));const e=r.nj.getByText(/learn react/i);expect(e).toBeInTheDocument()}))},42634:()=>{}}]);
+//# sourceMappingURL=598.15973eea.chunk.js.map
